@@ -611,8 +611,8 @@ int main()
         string shoot;
         while (true) {
             cout << "Введите координату выстрела: ";
-            //cin >> shoot; введ выстрела в ручную
-            shoot = fp1.RandKordBot(fb2);
+            cin >> shoot; введ выстрела в ручную
+            //shoot = fp1.RandKordBot(fb2);
             if (shoot[0] - 'a' >= 0 and shoot[0] - 'a' <= 9 and shoot[1] - '0' >= 0 and shoot[1] - '0' <= 9)
                 break;
             cout << "Ведены не корректные данные" << endl;
@@ -635,109 +635,3 @@ int main()
         }
     }
 }
-/*
-a0 d0
-a2 c2
-a4 c4
-a6 b6
-a8 b8
-j0 i0
-j2
-h2
-j4
-h4
-
-
-Run-Time Check Failure #2 - Stack around the variable 'fb2' was corrupted.
-*/
-/*
-bool checkShip1(string co) {
-    bool gorizontal = 1;
-    int co1 = co[0] - 'a';
-    int co2 = co[1] - '0';
-    int co11 = co1;
-    int co22 = co2;
-    for (;;) {
-        if (co1 > 0 and field[co1 - 1][co2] != '!' and field[co1 - 1][co2] != '*' and field[co1 - 1][co2] != '.')
-            --co1;
-        else
-            break;
-    }
-        cout << co1 << " co2eeee" << endl;
-        Sleep(1000);
-    for (;;) {
-        if (co2 > 0 and field[co1][co2 - 1] != '!' and field[co1][co2 - 1] != '*' and field[co1][co2 - 1] != '.')
-            --co2;
-        else
-            break;
-    }
-    cout << co2 << " co1eeee" << endl;
-    Sleep(1000);
-    if (co11 == co1 and co22 != co2) {
-        gorizontal = false;
-    }
-    if (co11 != co1 and co22 == co2) {
-        gorizontal = true;
-    }
-    else {
-        if (co1 != 9) {
-            if (co1 - 1 > 0) {
-                if (field[co1 - 1][co2] == 'X' or field[co1 - 1][co2] == '#')
-                    gorizontal = true;
-            }
-            if (co1 + 1 >= 0) {
-                if (field[co1 + 1][co2] == 'X' or field[co1 + 1][co2] == '#')
-                    gorizontal = true;
-            }
-        }
-        if (co2 != 9) {
-            if (co2 - 1 > 0) {
-                if (field[co1][co2 - 1] == 'X' or field[co1][co2 - 1] == '#')
-                    gorizontal = false;
-            }
-            if (co2 + 1 >= 0) {
-                if (field[co1][co2 + 1] == 'X' or field[co1][co2 + 1] == '#')
-                    gorizontal = false;
-            }
-        }
-    }
-    /*if (co11 == co1 and co22 != co2) {
-        cout << 0000000000000 << endl;
-        Sleep(1300);
-    }
-    if (co11 == co1 and co22 != co2) {
-        gorizontal = false;
-    }
-    if (co11 != co1 and co22 == co2) {
-        gorizontal = true;
-    }
-    if (co11 == co1 and co22 == co2) {
-        if (co2 != 9 and field[co1][co2 + 1] != '!' and field[co1][co2 + 1] != '*' and field[co1][co2 + 1] != '.')
-            gorizontal = false;
-        if (co2 != 9 and field[co1][co2 + 1] != '!' and field[co1][co2 + 1] != '*' and field[co1][co2 + 1] != '.') {
-            cout << 1111111111111111111 << endl;
-            Sleep(1300);
-        }
-        if (co2 == 9)
-            gorizontal = true;
-    }
-if (gorizontal == true) {
-    for (int i = 0; i < 10; i++) {
-        if (co1 + i < 10 and field[co1 + i][co2] == '#')
-            cout << field[co1 + i][co2] << endl;
-        if (co1 + i < 10 and field[co1 + i][co2] == '#')
-            return false;
-
-    }
-}
-else if (gorizontal == false) {
-    for (int i = 0; i < 10; i++) {
-        if (co1 + i < 10 and field[co1][co2 + i] == '#')
-            cout << field[co1][co2 + i] << endl;
-        if (co2 + i < 10 and field[co1][co2 + i] == '#')
-            return false;
-
-    }
-}
-return true;
-}*/
