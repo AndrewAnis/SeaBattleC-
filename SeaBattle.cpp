@@ -611,7 +611,7 @@ int main()
         string shoot;
         while (true) {
             cout << "Введите координату выстрела: ";
-            cin >> shoot; введ выстрела в ручную
+            cin >> shoot;// введ выстрела в ручную
             //shoot = fp1.RandKordBot(fb2);
             if (shoot[0] - 'a' >= 0 and shoot[0] - 'a' <= 9 and shoot[1] - '0' >= 0 and shoot[1] - '0' <= 9)
                 break;
